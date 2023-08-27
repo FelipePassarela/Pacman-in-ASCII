@@ -33,3 +33,7 @@ Após isso, o jogo será executado no terminal. O jogador deverá indicar a dire
 ## Licença
 
 Nenhuma.
+
+<hr></hr>
+
+**Contato:** felipepassarela11@gmail.com

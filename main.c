@@ -2,7 +2,7 @@
  * @file FelipeDosSantosPassarela.c
  * @author Felipe dos Santos Passarela (felipepassarela11@gmail.com)
  *
- * @brief Este programa eh um trabalho da disciplina Programacao 1, do curso de
+ * @brief Este projeto eh um trabalho da disciplina Programacao 1, do curso de
  * Ciencia da Computacao, ofertado pela Universidade Federal do Espirito Santo (UFES).
  *
  * O programa eh o jogo do Pac-Man implementado em ASCII, onde o jogador controla o

@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #define MAX_DIR_SIZE 1001
 #define QTD_FANTASMAS 4
@@ -325,6 +326,13 @@ int verificaTrocaDePosicao(tPacman pacman, tFantasma fantasmas[QTD_FANTASMAS]);
 
 
 ///////////////////////////////// FUNCOES DE ESTATISTICAS ////////////////////////////
+/**
+ * @brief Cria a pasta de saida do jogo.
+ * 
+ * @param dir Diretorio do jogo 
+ */
+void criaPastaSaida(char* dir);
+
 /**
  * @brief Gera o arquivo 'inicializacao.txt' com as informacoes iniciais do jogo.
  *
@@ -837,6 +845,7 @@ tJogo inicializaJogo(char* dir) {
     tJogo jogo = { 0 };
 
     strcpy(jogo.dir, dir);
+    criaPastaSaida(jogo.dir);
     limpaResumo(jogo.dir);
 
     jogo.mapa = criaMapa(dir);
@@ -851,6 +860,7 @@ tJogo inicializaJogo(char* dir) {
 }
 
 tJogo realizaJogo(tJogo jogo) {
+    printEstadoJogo(jogo);
     scanf(" %c", &jogo.pacman.direcao);
 
     jogo = moveFantasmas(jogo);
@@ -930,6 +940,13 @@ int verificaTrocaDePosicao(tPacman pacman, tFantasma fantasmas[QTD_FANTASMAS]) {
 
 
 //////////////////////////////// FUNCOES DE ESTATISTICAS //////////////////////////////
+void criaPastaSaida(char* dir) {
+    char pasta_saida_dir[MAX_DIR_SIZE + 7];
+    sprintf(pasta_saida_dir, "%s/saida", dir);
+
+    mkdir(pasta_saida_dir, 0777);
+}
+
 void geraInicializacaoTxt(tJogo jogo) {
     FILE* inicializacaoFile;
     char inicializacao_dir[MAX_DIR_SIZE + 26];

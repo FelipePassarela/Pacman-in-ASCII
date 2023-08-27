@@ -16,7 +16,7 @@ Compile o código fonte para um executável.
 
 Exemplo:
 ```bash
-gcc main.c -o [nome do arquivo compilado].exe
+gcc main.c -o [nome_do_arquivo_compilado].exe
 ```
 
 ## Como Usar
@@ -25,7 +25,7 @@ Execute o arquivo compilado, informando o diretório atual como parâmetro.
 
 Exemplo:
 ```bash
-./[nome do arquivo compilado].exe ./
+./[nome_do_arquivo_compilado].exe ./
 ```
 
 Após isso, o jogo será executado no terminal. O jogador deverá indicar a direção do Pac-Man (W,A,S,D) na linha de comando e apertar Enter.

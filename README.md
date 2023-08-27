@@ -34,6 +34,7 @@ Após isso, o jogo será executado no terminal. O jogador deverá indicar a dire
 
 Nenhuma.
 
+
 <hr></hr>
 
 **Contato:** felipepassarela11@gmail.com
